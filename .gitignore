@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BowlingBall/obj/Debug
+/BowlingBall/Properties
+/BowlingBall.Tests/obj/Debug
+/BowlingBall.Tests/Properties
+/.vs/BowlingBall/v16
