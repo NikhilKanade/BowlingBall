@@ -13,16 +13,26 @@ namespace BowlingBall.Tests
             var game = new Game();
             Roll(game, 0, 20);
             Assert.AreEqual(0, game.GetScore());
-        }        
+        }
 
         [TestMethod]
         public void Gutter_game_score_should_be_300_test()
         {
             var game = new Game();
             //10th frame contain 3 balls
-            List<int> list = new List<int>() { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+            List<int> list = new List<int>() { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
             Roll(game, list);
             Assert.AreEqual(300, game.GetScore());
+        }
+
+        [TestMethod]
+        public void Gutter_game_score_should_be_295_test()
+        {
+            var game = new Game();
+            //10th frame contain 3 balls
+            List<int> list = new List<int>() { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 5 };
+            Roll(game, list);
+            Assert.AreEqual(295, game.GetScore());
         }
 
         [TestMethod]
@@ -30,19 +40,29 @@ namespace BowlingBall.Tests
         {
             var game = new Game();
             //10th frame contain 3 balls
-            List<int> list = new List<int>() { 0,5, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+            List<int> list = new List<int>() { 0, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
             Roll(game, list);
             Assert.AreEqual(275, game.GetScore());
         }
 
         [TestMethod]
-        public void Gutter_game_score_should_be_270_test()
+        public void Gutter_game_score_should_be_285_test()
         {
             var game = new Game();
             //10th frame contain 3 balls
             List<int> list = new List<int>() { 0, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 5 };
             Roll(game, list);
-            Assert.AreEqual(265, game.GetScore());
+            Assert.AreEqual(285, game.GetScore());
+        }
+
+        [TestMethod]
+        public void Gutter_game_score_should_be_240_test()
+        {
+            var game = new Game();
+            //10th frame contain 3 balls
+            List<int> list = new List<int>() { 0, 10, 10, 10, 10, 10, 5, 5, 10, 10, 10, 5, 10, 5 };
+            Roll(game, list);
+            Assert.AreEqual(240, game.GetScore());
         }
 
         [TestMethod]
@@ -73,6 +93,116 @@ namespace BowlingBall.Tests
             List<int> list = new List<int>() { 8, 1, 0, 9, 2, 8, 10, 6, 3, 7, 0, 5, 2, 10, 0, 6, 2, 8, 10 };
             Roll(game, list);
             Assert.AreEqual(122, game.GetScore());
+        }
+
+        [TestMethod]
+        public void Gutter_game_score_should_be_150_test()
+        {
+            var game = new Game();
+            //10th frame contain 3 balls
+            List<int> list = new List<int>() { 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 };
+            Roll(game, list);
+            Assert.AreEqual(150, game.GetScore());
+        }
+
+        [TestMethod]
+        public void Gutter_game_score_should_be_68_test()
+        {
+            var game = new Game();
+            //10th frame contain 3 balls
+            List<int> list = new List<int>() { 1, 2, 3, 4, 5, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5, 5, 4, 3, 2, 1, 1 };
+            Roll(game, list);
+            Assert.AreEqual(68, game.GetScore());
+        }
+
+        [TestMethod]
+        public void Gutter_game_score_should_be_100_test()
+        {
+            var game = new Game();
+            //10th frame contain 3 balls
+            List<int> list = new List<int>() { 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0 };
+            Roll(game, list);
+            Assert.AreEqual(100, game.GetScore());
+        }
+
+        [TestMethod]
+        public void Gutter_game_score_should_be_157_test()
+        {
+            var game = new Game();
+            //10th frame contain 3 balls
+            List<int> list = new List<int>() { 4, 6, 5, 5, 7, 3, 8, 2, 9, 1, 2, 8, 3, 7, 4, 6, 5, 5, 4, 6, 10 };
+            Roll(game, list);
+            Assert.AreEqual(157, game.GetScore());
+        }
+
+        [TestMethod]
+        public void Gutter_game_score_should_be_166_test()
+        {
+            var game = new Game();
+            //10th frame contain 3 balls
+            List<int> list = new List<int>() { 10, 5, 5, 7, 3, 8, 2, 9, 1, 2, 8, 3, 7, 4, 6, 5, 5, 4, 10, 10 };
+            Roll(game, list);
+            Assert.AreEqual(166, game.GetScore());
+        }
+
+        [TestMethod]
+        public void Gutter_game_score_should_be_81_test()
+        {
+            var game = new Game();
+            //10th frame contain 3 balls
+            List<int> list = new List<int>() { 4, 4, 5, 5, 3, 3, 2, 2, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 10, 10, 10 };
+            Roll(game, list);
+            Assert.AreEqual(81, game.GetScore());
+        }
+
+        [TestMethod]
+        public void Gutter_game_score_should_be_20_test()
+        {
+            var game = new Game();
+            //10th frame contain 3 balls
+            List<int> list = new List<int>() { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+            Roll(game, list);
+            Assert.AreEqual(20, game.GetScore());
+        }
+
+        [TestMethod]
+        public void Gutter_game_score_should_be_40_test()
+        {
+            var game = new Game();
+            //10th frame contain 3 balls
+            List<int> list = new List<int>() { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+            Roll(game, list);
+            Assert.AreEqual(40, game.GetScore());
+        }
+
+        [TestMethod]
+        public void Gutter_game_score_should_be_60_test()
+        {
+            var game = new Game();
+            //10th frame contain 3 balls
+            List<int> list = new List<int>() { 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 };
+            Roll(game, list);
+            Assert.AreEqual(60, game.GetScore());
+        }
+
+        [TestMethod]
+        public void Gutter_game_score_should_be_80_1_test()
+        {
+            var game = new Game();
+            //10th frame contain 3 balls
+            List<int> list = new List<int>() { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 };
+            Roll(game, list);
+            Assert.AreEqual(80, game.GetScore());
+        }
+
+        [TestMethod]
+        public void Gutter_game_score_should_be_165_test()
+        {
+            var game = new Game();
+            //10th frame contain 3 balls
+            List<int> list = new List<int>() { 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 10, 10 };
+            Roll(game, list);
+            Assert.AreEqual(150, game.GetScore());
         }
 
         [TestMethod]
