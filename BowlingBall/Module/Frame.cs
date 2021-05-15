@@ -8,15 +8,12 @@ namespace BowlingBall.Module
     /// </summary>
     public class Frame
     {
-        private List<Ball> _balls;
-        private int _frameScore;
+        public List<Ball> Balls { get; set; }
+        public int FrameScore { get; set; }
         public Frame()
         {
-            _balls = FactoryService.GetBalls();
+            Balls = BowlingFactoryService.GetBalls();
         }
-
-        public List<Ball> balls { get => _balls; set => _balls = value; }
-        public int frameScore { get => _frameScore; set => _frameScore = value; }
 
     }
 }
